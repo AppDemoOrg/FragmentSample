@@ -12,7 +12,7 @@ import com.abt.fragment.R;
 
 public class FindFragment extends Fragment {
 
-    View mView;
+    private View mView;
 
     @Nullable
     @Override

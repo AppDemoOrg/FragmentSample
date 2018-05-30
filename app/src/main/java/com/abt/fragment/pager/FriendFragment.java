@@ -12,7 +12,7 @@ import com.abt.fragment.R;
 
 public class FriendFragment extends Fragment {
 
-    View mView;
+    private View mView;
 
     @Nullable
     @Override
