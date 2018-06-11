@@ -1,27 +1,27 @@
 package com.abt.fragment.activity;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.view.ViewPager;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.abt.fragment.pager.ChatFragment;
-import com.abt.fragment.pager.FindFragment;
-import com.abt.fragment.pager.FriendFragment;
 import com.abt.fragment.R;
 import com.abt.fragment.adapter.ViewPagerAdapter;
+import com.abt.fragment.pager.FindFragment;
+import com.abt.fragment.pager.FriendFragment;
+import com.abt.fragment.studio_byo.ItemFragment;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener, ViewPager.OnPageChangeListener {
+public class TabsHolderActivity extends AppCompatActivity implements View.OnClickListener, ViewPager.OnPageChangeListener {
 
-    private static final String TAG = "MainActivity";
+    private static final String TAG = "TabsHolderActivity";
     private TextView titleTextView;
     private LinearLayout firstLinearLayout;
     private LinearLayout secondLinearLayout;
@@ -53,10 +53,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     public void initFragmentList() {
-        Fragment chat = new ChatFragment();
+        Fragment items = new ItemFragment();
+        //Fragment chat = new ChatFragment();
         Fragment friend = new FriendFragment();
         Fragment find = new FindFragment();
-        mFragmentList.add(chat);
+        mFragmentList.add(items);
         mFragmentList.add(friend);
         mFragmentList.add(find);
     }

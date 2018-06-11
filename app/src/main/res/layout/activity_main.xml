@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.abt.fragment.activity.MainActivity">
+    tools:context="com.abt.fragment.activity.TabsHolderActivity">
 
     <include layout="@layout/layout_top"></include>
 
