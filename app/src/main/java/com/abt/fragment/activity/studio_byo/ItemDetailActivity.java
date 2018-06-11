@@ -14,6 +14,7 @@ import android.view.View;
 
 import com.abt.fragment.R;
 import com.abt.fragment.studio_byo.ItemFragment;
+import com.abt.fragment.studio_byo.ItemListDialogFragment;
 import com.abt.fragment.studio_byo.PlusOneFragment;
 import com.abt.fragment.studio_byo.dummy.DummyContent;
 
@@ -24,7 +25,9 @@ import com.abt.fragment.studio_byo.dummy.DummyContent;
  * in a {@link ItemListActivity}.
  */
 public class ItemDetailActivity extends AppCompatActivity implements
-        ItemFragment.OnListFragmentInteractionListener, PlusOneFragment.OnFragmentInteractionListener {
+        ItemFragment.OnListFragmentInteractionListener,
+        PlusOneFragment.OnFragmentInteractionListener,
+        ItemListDialogFragment.Listener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -82,9 +85,9 @@ public class ItemDetailActivity extends AppCompatActivity implements
                     .commit();*/
 
             Bundle arguments = new Bundle();
-            arguments.putString(PlusOneFragment.ARG_ITEM_ID,
-                    getIntent().getStringExtra(PlusOneFragment.ARG_ITEM_ID));
-            PlusOneFragment fragment = new PlusOneFragment();
+            arguments.putString(ItemListDialogFragment.ARG_ITEM_ID,
+                    getIntent().getStringExtra(ItemListDialogFragment.ARG_ITEM_ID));
+            ItemListDialogFragment fragment = new ItemListDialogFragment();
             fragment.setArguments(arguments);
             getSupportFragmentManager().beginTransaction()
                     .add(R.id.item_detail_container, fragment)
@@ -116,6 +119,11 @@ public class ItemDetailActivity extends AppCompatActivity implements
 
     @Override
     public void onFragmentInteraction(Uri uri) {
+
+    }
+
+    @Override
+    public void onItemClicked(int position) {
 
     }
 }
