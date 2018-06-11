@@ -1,6 +1,7 @@
 package com.abt.fragment.activity.studio_byo;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -13,6 +14,7 @@ import android.view.View;
 
 import com.abt.fragment.R;
 import com.abt.fragment.studio_byo.ItemFragment;
+import com.abt.fragment.studio_byo.PlusOneFragment;
 import com.abt.fragment.studio_byo.dummy.DummyContent;
 
 /**
@@ -22,7 +24,7 @@ import com.abt.fragment.studio_byo.dummy.DummyContent;
  * in a {@link ItemListActivity}.
  */
 public class ItemDetailActivity extends AppCompatActivity implements
-        ItemFragment.OnListFragmentInteractionListener {
+        ItemFragment.OnListFragmentInteractionListener, PlusOneFragment.OnFragmentInteractionListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,6 +60,8 @@ public class ItemDetailActivity extends AppCompatActivity implements
         if (savedInstanceState == null) {
             // Create the detail fragment and add it to the activity
             // using a fragment transaction.
+
+            // TODO load default Fragment
             /*Bundle arguments = new Bundle();
             arguments.putString(ItemDetailFragment.ARG_ITEM_ID,
                     getIntent().getStringExtra(ItemDetailFragment.ARG_ITEM_ID));
@@ -67,10 +71,20 @@ public class ItemDetailActivity extends AppCompatActivity implements
                     .add(R.id.item_detail_container, fragment)
                     .commit();*/
 
-            Bundle arguments = new Bundle();
+            // TODO load ItemFragment
+            /*Bundle arguments = new Bundle();
             arguments.putString(ItemFragment.ARG_ITEM_ID,
                     getIntent().getStringExtra(ItemFragment.ARG_ITEM_ID));
             ItemFragment fragment = new ItemFragment();
+            fragment.setArguments(arguments);
+            getSupportFragmentManager().beginTransaction()
+                    .add(R.id.item_detail_container, fragment)
+                    .commit();*/
+
+            Bundle arguments = new Bundle();
+            arguments.putString(PlusOneFragment.ARG_ITEM_ID,
+                    getIntent().getStringExtra(PlusOneFragment.ARG_ITEM_ID));
+            PlusOneFragment fragment = new PlusOneFragment();
             fragment.setArguments(arguments);
             getSupportFragmentManager().beginTransaction()
                     .add(R.id.item_detail_container, fragment)
@@ -97,6 +111,11 @@ public class ItemDetailActivity extends AppCompatActivity implements
 
     @Override
     public void onListFragmentInteraction(DummyContent.DummyItem item) {
+
+    }
+
+    @Override
+    public void onFragmentInteraction(Uri uri) {
 
     }
 }
