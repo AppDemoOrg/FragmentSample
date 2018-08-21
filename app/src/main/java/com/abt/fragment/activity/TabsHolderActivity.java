@@ -12,9 +12,9 @@ import android.widget.TextView;
 
 import com.abt.fragment.R;
 import com.abt.fragment.adapter.ViewPagerAdapter;
+import com.abt.fragment.pager.ChatFragment;
 import com.abt.fragment.pager.FindFragment;
 import com.abt.fragment.pager.FriendFragment;
-import com.abt.fragment.studio_byo.ItemFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -54,11 +54,10 @@ public class TabsHolderActivity extends AppCompatActivity implements
     }
 
     public void initFragmentList() {
-        Fragment items = new ItemFragment();
-        //Fragment chat = new ChatFragment();
+        Fragment chat = new ChatFragment();
         Fragment friend = new FriendFragment();
         Fragment find = new FindFragment();
-        mFragmentList.add(items);
+        mFragmentList.add(chat);
         mFragmentList.add(friend);
         mFragmentList.add(find);
     }
