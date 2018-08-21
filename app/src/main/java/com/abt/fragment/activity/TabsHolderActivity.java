@@ -19,7 +19,8 @@ import com.abt.fragment.studio_byo.ItemFragment;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TabsHolderActivity extends AppCompatActivity implements View.OnClickListener, ViewPager.OnPageChangeListener {
+public class TabsHolderActivity extends AppCompatActivity implements
+        View.OnClickListener, ViewPager.OnPageChangeListener {
 
     private static final String TAG = "TabsHolderActivity";
     private TextView titleTextView;

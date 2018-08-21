@@ -11,26 +11,31 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.TabsHolderActivity"></activity>
-        <activity
-            android:name=".activity.studio_byo.ItemListActivity"
-            android:label="@string/title_item_list"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity
-            android:name=".activity.studio_byo.ItemDetailActivity"
-            android:label="@string/title_item_detail"
-            android:parentActivityName=".activity.studio_byo.ItemListActivity"
-            android:theme="@style/AppTheme.NoActionBar">
+
+        <activity android:name=".activity.TabsHolderActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
 
+        <activity
+            android:name=".activity.studio_byo.ItemListActivity"
+            android:label="@string/title_item_list"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+
+        <activity
+            android:name=".activity.studio_byo.ItemDetailActivity"
+            android:label="@string/title_item_detail"
+            android:parentActivityName=".activity.studio_byo.ItemListActivity"
+            android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.abt.fragment.activity.studio_byo.ItemListActivity" />
         </activity>
+
     </application>
 
 </manifest>
