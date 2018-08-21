@@ -25,5 +25,6 @@ c、remove和detach有一点细微的区别，在不考虑回退栈的情况下�
 ## 参考文献
 1、[FragmentStatePagerAdapter与FragmentPagerAdapter的区别](https://blog.csdn.net/jianyucsdn/article/details/52824901)
 2、[Android Fragment 真正的完全解析（上）](https://blog.csdn.net/lmj623565791/article/details/37970961)
-3、[]()
-
+3、[Android Fragment 真正的完全解析（下）](https://blog.csdn.net/lmj623565791/article/details/37992017)
+4、[Android 官方推荐 : DialogFragment 创建对话框](https://blog.csdn.net/lmj623565791/article/details/37815413)
+5、[Android 屏幕旋转 处理 AsyncTask 和 ProgressDialog 的最佳方案](https://blog.csdn.net/lmj623565791/article/details/37815413)
